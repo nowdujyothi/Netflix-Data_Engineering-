@@ -1,0 +1,30 @@
+name: 'netflix'
+version: '1.0.0'
+
+
+profile: 'netflix'
+
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:        
+  - "target"
+  - "dbt_packages"
+
+
+
+models:
+  netflix:
+    staging:
+      +materialized: table
+      +schema: staging
+
+    intermediate_model:
+      +materialized: table
+      +schema: intermediate
+     
