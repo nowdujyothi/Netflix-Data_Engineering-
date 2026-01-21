@@ -1,0 +1,7 @@
+models:
+   - name: st_GENOME_SCORES
+     config:
+       materialized: table
+
+
+   
